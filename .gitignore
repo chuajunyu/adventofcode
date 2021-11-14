@@ -4,12 +4,12 @@ venv/
 # Ignore pycache
 __pycache__/
 
-# Ignore todo
-/Todo.txt
+# Ignore inputs/tests
 2020/input.txt
+2020/test.txt
 /test.py
 
-# ignore unimportant days
+# ignore incomplete
 2020/day1.py
 2020/day2.py
 2020/day3.py
