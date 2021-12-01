@@ -5,9 +5,9 @@ venv/
 __pycache__/
 
 # Ignore inputs/tests
-2020/input.txt
-2020/test.txt
-/test.py
+**/input.txt
+**/test.txt
+**/test.py
 
 # ignore incomplete
 2020/day1.py
