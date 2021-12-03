@@ -56,7 +56,7 @@ o2 = find_rating(input, False)
 print("Part 2 :", co2 * o2)
 
 
-
+# Alternative solution for part 1
 def get_power(input):
     """
     An alernative method using nested loops
@@ -69,8 +69,7 @@ def get_power(input):
     for pos in range(length):
         counter = {'0': 0, '1': 0}
         for num in input:
-            counter[num[pos]] += 1
-                
+            counter[num[pos]] += 1    
         least, most = sorted(counter, key=lambda x: counter[x])
         gamma += most
         epsilon += least
