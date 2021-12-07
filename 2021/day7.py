@@ -6,23 +6,8 @@ input = input[0].split(',')
 input = [int(i) for i in input]
 
 
-def memo(func):
-    cache = {}
-    def memo_func(input):
-        if input in cache:
-            return cache[input]
-        else:
-            result = func(input)
-            cache[input] = result
-            return result
-    return memo_func
-
-
-# Memoization to cache results and improve efficiency
-# Reduced time from 8.8s to 0.4s
-@memo
 def cost(steps):
-    fuel = sum([i for i in range(1, steps + 1)])
+    fuel = ((steps + 1) * steps) // 2
     return fuel
 
 
@@ -67,3 +52,11 @@ def least_fuel(input, cost):
 
 print("Part 1: ", least_fuel(input, lambda x : x))
 print("Part 2: ", least_fuel(input, cost))
+
+
+"""
+My solution uses brute force to search for the optimal position
+However, it can be deduced that 
+Part 1's optimal position is the median (Optimality Theory)
+Part 2's optimal position is very close to the mean (+/- 1) (Minimise mean squared)
+"""
