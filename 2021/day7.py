@@ -18,8 +18,6 @@ def least_fuel(input, cost):
 
     Find least fuel either from positions avg to max or avg to min depending on 
     whether there are more or less crabs greater than avg respectively
-
-    Doing this cuts time from 1.2s to 0.4s (with memoization)
     """
     avg = sum(input) // len(input)
     high = max(input)
