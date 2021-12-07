@@ -57,6 +57,6 @@ print("Part 2: ", least_fuel(input, cost))
 """
 My solution uses brute force to search for the optimal position
 However, it can be deduced that 
-Part 1's optimal position is the median (Optimality Theory)
+Part 1's optimal position is the median (Optimality Property)
 Part 2's optimal position is very close to the mean (+/- 1) (Minimise mean squared)
 """
