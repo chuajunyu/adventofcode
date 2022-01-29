@@ -14,3 +14,16 @@ def extract_input(filename):
         input[i] = input[i].strip('\n')
     
     return input
+
+
+def convert_map_dict(input):
+    """
+    Converts a nested list map into a dictionary
+    With key value pairs of tuple coordinates to int values
+    """
+    map_dict = {}
+    for y, row in enumerate(input):
+        for x, value in enumerate(row):
+            map_dict[(x, y)] = int(value)
+    return map_dict 
+    
