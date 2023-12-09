@@ -52,6 +52,3 @@ def part2(input):
 
 print(part2(input))
 
-
-
-
