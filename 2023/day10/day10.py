@@ -3,14 +3,6 @@ from utils import read_input_lines
 input = read_input_lines("input.txt")
 
 
-"""
-1. Convert the input into a adjacency list
-2. Start with S and do dfs to find the loop
-3. Count how many tiles it take to go around the loop
-4. Middle is the furthest away
-"""
-
-
 def make_adjacency_list(input):
     adj_list = {}
     s = None
