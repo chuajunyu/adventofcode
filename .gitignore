@@ -4,14 +4,16 @@ venv/
 # Ignore pycache
 __pycache__/
 
-# Ignore inputs/tests
+# Ignore inputs/test code
 **/input.txt
-**/test.txt
+**/input**.txt
 **/test.py
+2023/*/test.txt
 
 # ignore incomplete
 2020/day1.py
 2020/day2.py
 2020/day3.py
 2020/day4.py
+2021/day12.py
 2023/day13
