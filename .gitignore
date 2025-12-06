@@ -4,11 +4,15 @@ venv/
 # Ignore pycache
 __pycache__/
 
+# Ignore cargo target
+2025/target/
+
 # Ignore inputs/test code
 **/input.txt
 **/input**.txt
 **/test.py
 2023/*/test.txt
+2025/input/*
 
 # ignore incomplete
 2020/day1.py
