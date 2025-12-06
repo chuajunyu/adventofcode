@@ -11,7 +11,8 @@ fn main() {
         .expect("Should have been able to read the file");
 
     // initialise a counter variable and a dial variable
-    let mut answer = 0;
+    let mut part1_answer = 0;
+    let mut part2_answer = 0;
     let mut counter = 0;
     let mut dial = 50;
     let mut end = false;
@@ -54,7 +55,7 @@ fn main() {
             loop {
                 if magnitude >= 100 {
                     magnitude -= 100;
-                    answer += 1;
+                    part2_answer += 1;
                     // println!("added 1 norm");
                 } else {
                     break;
@@ -77,14 +78,14 @@ fn main() {
 
             if 0 <= dial && dial <= 99 {
                 if dial == 0 && ! (prev_dial == 0) {
-                    answer += 1;
+                    part2_answer += 1;
                     // println!("added 1 case 6");
                 }
             } else {
                 if dial < 0 {
                     dial += 100;
                     if prev_dial != 0 {
-                        answer += 1;
+                        part2_answer += 1;
                         // println!("added 1 case 4");
                     }
                 }
@@ -92,15 +93,19 @@ fn main() {
                 if dial > 99 {
                     // println!("added 1 case 5");
                     dial -= 100;
-                    answer += 1;
+                    part2_answer += 1;
                 }
             
             }
-            // println!("dial {direction}{magnitude} {prev_dial} -> {dial}");
+
+            if dial == 0 {
+                part1_answer += 1
+            }
         }
 
         if end {
-            println!("Day 1 Part 1 Answer: {answer}");
+            println!("Part 1 Answer: {part1_answer}");
+            println!("Part 2 Answer: {part2_answer}");
             break;
         }
     }
