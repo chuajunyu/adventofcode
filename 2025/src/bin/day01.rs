@@ -1,14 +1,11 @@
-use std::fs;
+use aoc2025::read_file;
 
 fn main() {
 
     // write a function to read the day1.txt file
 
-    let file_path = "input/day1.txt";
-    println!("In file {file_path}");
-
-    let contents = fs::read_to_string(file_path)
-        .expect("Should have been able to read the file");
+    let file_path = "input/day01.txt";
+    let contents = read_file(file_path);
 
     // initialise a counter variable and a dial variable
     let mut part1_answer = 0;
@@ -109,8 +106,6 @@ fn main() {
             break;
         }
     }
-
-    // when 0 we add
 }
 
     

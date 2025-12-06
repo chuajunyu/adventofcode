@@ -1,15 +1,12 @@
-use std::fs;
+use aoc2025::read_file;
 
 fn main() {
-    let file_path = "input/day2.txt";
-    println!("In file {file_path}");
-
-    let contents = fs::read_to_string(file_path)
-        .expect("Should have been able to read the file");
-
+    let file_path = "input/day02.txt";
+    let contents = read_file(file_path);
+    
     let mut part1_answer: i64 = 0;
     let mut part2_answer: i64 = 0;
-    
+
     for range in contents.split(",") {
         let parts: Vec<&str> = range.split("-").collect();
 
